@@ -1,34 +1,21 @@
 <?php
 
-/**
- * Author fixtures
- */
 class AuthorFixture extends CakeTestFixture {
+  public $name = 'Author';
 
-/**
- * The name of the fixture
- *
- * @var string
- */
-	public $name = 'Author';
+  public $fields = array(
+    'id'         => array('type' => 'integer', 'key' => 'primary'),
+    'first_name' => array('type' => 'string', 'null' => false),
+    'last_name'  => array('type' => 'string', 'null' => false),
+    'created'    => 'datetime',
+    'updated'    => 'datetime'
+  );
 
-/**
- * The fields
- *
- * @var array
- */
-	public $fields = array(
-		'id' => array('type' => 'integer', 'key' => 'primary'),
-		'first_name' => array('type' => 'string', 'null' => false),
-		'last_name' => array('type' => 'string', 'null' => false),
-		'created' => array('type' => 'datetime'),
-		'updated' => array('type' => 'datetime'),
-	);
-
-/**
- * The records
- *
- * @var array
- */
-	public $records = array();
+  /**
+   * records property
+   *
+   * @public array
+   * @access public
+   */
+  public $records = array();
 }
